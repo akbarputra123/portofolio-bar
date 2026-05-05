@@ -1,0 +1,68 @@
+/* 🔥 PROJECT SECTION */
+.project-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 🔥 GRID (INI YANG KAMU BUTUH) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔥 3 kolom */
+  gap: 30px;
+  width: 100%;
+}
+
+/* 📦 GRID ITEM */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+/* 📸 IMAGE */
+.project-img {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+
+  border: 3px solid var(--black);
+  box-shadow: 6px 6px 0 var(--black);
+
+  transition: 0.2s;
+}
+
+/* ✨ HOVER (KONSISTEN HERO) */
+.project-img:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--black);
+}
+
+/* 📝 TEXT */
+.project-card h3 {
+  margin-top: 10px;
+}
+
+.project-card p {
+  opacity: 0.85;
+}
+
+/* 🔥 OPTIONAL RAPIIIN BUTTON POSISI (TIDAK UBAH STYLE) */
+.project-card button {
+  margin-top: 10px;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

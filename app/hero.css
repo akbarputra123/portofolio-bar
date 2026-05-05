@@ -1,0 +1,114 @@
+/* 🔥 HERO WRAPPER */
+.hero-box {
+  padding: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* 🖼️ IMAGE WRAPPER (BIAR GA GEPENG) */
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 📸 IMAGE FIX */
+.hero-img {
+  width: 100%;
+  max-width: 260px;
+  height: auto; /* 🔥 penting biar tidak gepeng */
+  aspect-ratio: 1 / 1; /* 🔥 biar tetap kotak */
+  object-fit: cover; /* 🔥 crop rapi */
+
+  border: 3px solid black;
+  box-shadow: 6px 6px 0 black;
+
+  transition: 0.2s;
+}
+
+/* ✨ HOVER IMAGE */
+.hero-img:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 black;
+}
+
+/* 🔗 SOCIAL */
+.hero-social {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ICON WRAPPER */
+.hero-social-item {
+  position: relative;
+}
+
+/* ICON */
+.hero-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 black;
+
+  transition: 0.2s;
+}
+
+.hero-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: black;
+}
+
+/* HOVER ICON */
+.hero-icon:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 black;
+  background: var(--purple-light);
+}
+
+.hero-icon:hover svg {
+  fill: white;
+}
+
+/* 🔥 TOOLTIP */
+.hero-tooltip {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+
+  background: black;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+
+  border: 2px solid white;
+  box-shadow: 2px 2px 0 white;
+
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.hero-social-item:hover .hero-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}

@@ -1,0 +1,154 @@
+/* 🔥 SECTION */
+#skills {
+  width: 100%;
+}
+
+/* 🔥 TITLE */
+.skill-title {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+/* 🔥 GRID */
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 900px) {
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🔥 SKILL ITEM */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔥 HOVER EFFECT */
+.skill-item:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--purple);
+  box-shadow: 0 0 20px rgba(160, 100, 255, 0.4);
+}
+
+/* 🔥 GLOW ANIMATION */
+.skill-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(160, 100, 255, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.skill-item:hover::before {
+  opacity: 1;
+}
+
+/* 🔥 HEADER */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 🔥 LEFT */
+.skill-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 🔥 LOGO */
+.skill-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+  border-radius: 6px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 black;
+  transition: transform 0.3s;
+}
+
+/* 🔥 LOGO HOVER */
+.skill-item:hover .skill-logo {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+/* 🔥 BAR */
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: #2a2740;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0 black;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🔥 FILL */
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--purple),
+    var(--purple-light)
+  );
+  transition: width 0.8s ease;
+  position: relative;
+}
+
+/* 🔥 BAR SHINE EFFECT */
+.skill-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+  transform: skewX(-20deg);
+}
+
+/* 🔥 SHINE ON HOVER */
+.skill-item:hover .skill-fill::after {
+  animation: shine 0.8s;
+}
+
+@keyframes shine {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 120%;
+  }
+}

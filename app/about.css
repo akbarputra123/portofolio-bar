@@ -1,0 +1,64 @@
+/* 🔥 ABOUT SECTION */
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* 🔤 TITLE CENTER */
+.about-title {
+  text-align: center;
+}
+
+/* 📦 CONTENT */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* 📸 IMAGE (SAMA STYLE HERO) */
+.about-img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
+  border: 3px solid var(--black);
+  box-shadow: 6px 6px 0 var(--black);
+
+  margin: auto;
+
+  transition: 0.2s;
+}
+
+/* ✨ HOVER TIPIS (KONSISTEN HERO) */
+.about-img:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--black);
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.9;
+
+  text-align: justify;
+  text-justify: inter-word;
+
+  max-width: 650px; /* biar tidak terlalu lebar */
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text {
+    margin: auto;
+  }
+}
