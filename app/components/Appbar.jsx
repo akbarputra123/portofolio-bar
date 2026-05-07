@@ -99,7 +99,7 @@ export default function Appbar() {
           className="theme-btn mobile-theme"
           onClick={() => setDark(!dark)}
         >
-          {dark ? "Light Mode ☀️" : "Dark Mode 🌙"}
+          {dark ? "Light Mode" : "Dark Mode"}
         </button>
 
       </div>
