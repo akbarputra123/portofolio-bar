@@ -203,40 +203,93 @@ export default function Home() {
 
   </div>
 </section>
+<section id="projects" className="section">
 
- <section id="projects" className="section">
   <h2 className="project-title">PROJECTS</h2>
 
-  <div className="grid">
+  <div className="project-list">
 
+    {/* PROJECT 1 */}
     <div className="project-card">
-      <img src="/project1.jpg" alt="project" className="project-img" />
-      <h3>Sistem Deteksi Jalan Rusak</h3>
-      <p>YOLOv8 + GIS + Flutter</p>
-      <button className="brutal-btn">DETAIL</button>
+
+      {/* IMAGE */}
+      <div className="project-image-wrapper">
+        <img
+          src="/1.png"
+          alt="project"
+          className="project-img"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="project-content">
+
+      <h3>Website Kelola Voucher Wi-Fi Realtime</h3>
+
+<p>
+  Sistem manajemen voucher Wi-Fi berbasis web untuk mengelola pengguna,
+  pembuatan voucher internet, monitoring status jaringan, serta kontrol
+  akses hotspot secara realtime dengan tampilan yang modern dan interaktif.
+</p>
+
+        <div className="project-tech">
+  <span>React</span>
+  <span>Node.js</span>
+  <span>Express.js</span>
+  <span>MySQL</span>
+</div>
+<a
+  href="https://siodev.sbs/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="brutal-btn">
+    Lihat Website
+  </button>
+</a>
+
+      </div>
+
     </div>
 
+    {/* PROJECT 2 */}
     <div className="project-card">
-      <img src="/project2.jpg" alt="project" className="project-img" />
-      <h3>Sistem Rekomendasi Obat Hama</h3>
-      <p>Decision Tree + Flask + MySQL</p>
-      <button className="brutal-btn">DETAIL</button>
-    </div>
 
-    <div className="project-card">
-      <img src="/project3.jpg" alt="project" className="project-img" />
-      <h3>Sistem Rekomendasi Obat Hama</h3>
-      <p>Decision Tree + Flask + MySQL</p>
-      <button className="brutal-btn">DETAIL</button>
-    </div>
-    <div className="project-card">
-      <img src="/project3.jpg" alt="project" className="project-img" />
-      <h3>Sistem Rekomendasi Obat Hama</h3>
-      <p>Decision Tree + Flask + MySQL</p>
-      <button className="brutal-btn">DETAIL</button>
+      {/* IMAGE */}
+      <div className="project-image-wrapper">
+        <img
+          src="/project2.jpg"
+          alt="project"
+          className="project-img"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="project-content">
+
+        <h3>Sistem Rekomendasi Obat Hama</h3>
+
+        <p>
+          Sistem pendukung keputusan berbasis Decision Tree untuk
+          menentukan rekomendasi obat hama tanaman padi berbasis web.
+        </p>
+
+        <div className="project-tech">
+          <span>Decision Tree</span>
+          <span>Flask</span>
+          <span>MySQL</span>
+        </div>
+
+        <button className="brutal-btn">
+          Lihat Website
+        </button>
+
+      </div>
+
     </div>
 
   </div>
+
 </section>
 
 <section id="skills" className="section">

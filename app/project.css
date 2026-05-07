@@ -1,68 +1,245 @@
+/* ================================= */
 /* 🔥 PROJECT SECTION */
+/* ================================= */
+
+#projects {
+  background: transparent;
+}
+
 .project-title {
   text-align: center;
-  margin-bottom: 40px;
+
+  margin-bottom: 50px;
+
+  color: white;
 }
 
-/* 🔥 GRID (INI YANG KAMU BUTUH) */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 🔥 3 kolom */
-  gap: 30px;
-  width: 100%;
-}
+/* ================================= */
+/* 🔥 LIST */
+/* ================================= */
 
-/* 📦 GRID ITEM */
-.project-card {
+.project-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 15px;
+  gap: 35px;
 }
 
-/* 📸 IMAGE */
-.project-img {
-  width: 100%;
-  max-width: 320px;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+/* ================================= */
+/* 🔥 CARD */
+/* ================================= */
 
-  border: 3px solid var(--black);
-  box-shadow: 6px 6px 0 var(--black);
+.project-card {
+  display: flex;
+  gap: 30px;
+
+  align-items: center;
+
+  padding: 25px;
+
+  background: rgba(255,255,255,0.05);
+
+  color: white;
+
+  /* 🔥 BORDER LUAR TETAP PUTIH */
+  border: 3px solid white;
+
+  box-shadow: 8px 8px 0 white;
+
+  backdrop-filter: blur(6px);
 
   transition: 0.2s;
 }
 
-/* ✨ HOVER (KONSISTEN HERO) */
+.project-card:hover {
+  transform: translate(-3px, -3px);
+
+  box-shadow: 11px 11px 0 white;
+}
+
+/* ================================= */
+/* 📸 IMAGE */
+/* ================================= */
+
+.project-image-wrapper {
+  flex: 1;
+}
+
+.project-img {
+  width: 100%;
+  max-width: 350px;
+
+  aspect-ratio: 16 / 10;
+
+  object-fit: cover;
+
+  border: 3px solid white;
+
+  box-shadow: 6px 6px 0 white;
+
+  transition: 0.2s;
+}
+
 .project-img:hover {
   transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 var(--black);
+
+  box-shadow: 9px 9px 0 white;
 }
 
-/* 📝 TEXT */
-.project-card h3 {
-  margin-top: 10px;
+/* ================================= */
+/* 📝 CONTENT */
+/* ================================= */
+
+.project-content {
+  flex: 1.2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.project-card p {
+.project-content h3 {
+  font-size: 28px;
+
+  font-weight: 900;
+
+  color: white;
+}
+
+.project-content p {
   opacity: 0.85;
+
+  line-height: 1.7;
+
+  color: #ddd;
 }
 
-/* 🔥 OPTIONAL RAPIIIN BUTTON POSISI (TIDAK UBAH STYLE) */
-.project-card button {
+/* ================================= */
+/* 🔥 TECH STACK */
+/* ================================= */
+
+.project-tech {
+  display: flex;
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+.project-tech span {
+  padding: 8px 14px;
+
+  background: var(--purple);
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  transition: 0.2s;
+}
+
+/* ================================= */
+/* 🔥 BUTTON */
+/* ================================= */
+
+.project-content button {
   margin-top: 10px;
+
+  width: fit-content;
 }
 
+/* ================================= */
+/* ☀️ LIGHT MODE */
+/* ================================= */
+
+/* BORDER TECHNOLOGY */
+body:not(.dark) .project-tech span {
+  border: 2px solid white;
+
+  box-shadow: 4px 4px 0 white;
+}
+
+/* BUTTON DETAIL */
+body:not(.dark) .project-content .brutal-btn {
+  border: 2px solid white;
+
+  box-shadow: 4px 4px 0 white;
+}
+
+/* ================================= */
+/* 🌙 DARK MODE */
+/* ================================= */
+
+body.dark .project-card {
+  background: rgba(20,20,35,0.7);
+
+  /* 🔥 BORDER LUAR TETAP PUTIH */
+  border-color: white;
+
+  box-shadow: 8px 8px 0 white;
+}
+
+body.dark .project-card:hover {
+  box-shadow: 11px 11px 0 white;
+}
+
+/* IMAGE */
+body.dark .project-img {
+  border-color: white;
+
+  box-shadow: 6px 6px 0 white;
+}
+
+body.dark .project-img:hover {
+  box-shadow: 9px 9px 0 white;
+}
+
+/* TITLE */
+body.dark .project-content h3 {
+  color: white;
+}
+
+/* DESC */
+body.dark .project-content p {
+  color: #d1d5db;
+}
+
+/* 🔥 TECHNOLOGY BORDER HITAM */
+body.dark .project-tech span {
+  background: #7B61FF;
+
+  border: 2px solid black;
+
+  box-shadow: 4px 4px 0 black;
+}
+
+/* 🔥 BUTTON DETAIL BORDER HITAM */
+body.dark .project-content .brutal-btn {
+  border: 2px solid black;
+
+  box-shadow: 4px 4px 0 black;
+}
+
+/* HOVER BUTTON */
+body.dark .project-content .brutal-btn:hover {
+  box-shadow: 6px 6px 0 black;
+}
+
+/* ================================= */
 /* 📱 RESPONSIVE */
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* ================================= */
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media (max-width: 900px) {
+
+  .project-card {
+    flex-direction: column;
   }
+
+  .project-img {
+    max-width: 100%;
+  }
+
+  .project-content {
+    width: 100%;
+  }
+
 }
