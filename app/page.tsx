@@ -252,42 +252,6 @@ export default function Home() {
 
     </div>
 
-    {/* PROJECT 2 */}
-    <div className="project-card">
-
-      {/* IMAGE */}
-      <div className="project-image-wrapper">
-        <img
-          src="/project2.jpg"
-          alt="project"
-          className="project-img"
-        />
-      </div>
-
-      {/* CONTENT */}
-      <div className="project-content">
-
-        <h3>Sistem Rekomendasi Obat Hama</h3>
-
-        <p>
-          Sistem pendukung keputusan berbasis Decision Tree untuk
-          menentukan rekomendasi obat hama tanaman padi berbasis web.
-        </p>
-
-        <div className="project-tech">
-          <span>Decision Tree</span>
-          <span>Flask</span>
-          <span>MySQL</span>
-        </div>
-
-        <button className="brutal-btn">
-          Lihat Website
-        </button>
-
-      </div>
-
-    </div>
-
   </div>
 
 </section>
