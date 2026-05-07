@@ -1,13 +1,6 @@
 "use client";
 import { Mail, MapPin, MessageCircle } from "lucide-react";
-import {
-  Code,
-  Database,
-  Server,
-  Cpu,
-  Layout,
-  FileCode
-} from "lucide-react";
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Appbar from "./components/Appbar";
@@ -18,7 +11,7 @@ import "./project.css";
 import "./skill.css";
 import "./contact.css";
 import "./globals.css"; // Make sure to import the global CSS
-
+import "./galery.css"
 export default function Home() {
 
   /* 🔥 TYPING EFFECT */
@@ -80,12 +73,14 @@ export default function Home() {
       </h1>
 
 
-      <p className="hero-desc">
-        Saya adalah seorang Fullstack Developer yang berfokus pada pengembangan 
-        aplikasi web dan mobile modern. Berpengalaman menggunakan Flutter, React, 
-        Python (Flask), dan MySQL untuk membangun sistem yang cepat, efisien, 
-        dan user-friendly.
-      </p>
+     <p className="hero-desc">
+  Saya adalah seorang Fullstack Developer dan AI Enthusiast yang
+  berfokus pada pengembangan aplikasi web, mobile, dan sistem berbasis
+  Artificial Intelligence. Berpengalaman menggunakan Flutter, Next.js,
+  Python (Flask), Laravel, MySQL, serta teknologi Computer Vision seperti
+  YOLO untuk membangun sistem yang modern, interaktif, dan bermanfaat
+  bagi pengguna.
+</p>
 
       {/* TYPING */}
       <p className="hero-typing">
@@ -137,7 +132,7 @@ export default function Home() {
         ].map((item, i) => (
           <div key={i} className="hero-social-item">
             <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <div className="hero-icon">
+             <div className={`hero-icon ${item.name.toLowerCase()}`}>
                 <svg viewBox="0 0 24 24">
                   {item.icon}
                 </svg>
@@ -297,43 +292,133 @@ export default function Home() {
   </div>
 </section>
 
+<section>
+  <div  id="galery" className="section">
+
+    <div  className="galery-wrapper">
+      <h2>Galery</h2>
+
+
+    </div>
+
+  </div>
+</section>
 
 <section id="contact" className="section">
   <div className="contact-wrapper">
 
+    {/* TITLE */}
     <h2>CONTACT</h2>
 
     <p className="contact-desc">
-      Jika ingin bekerja sama atau berdiskusi, silakan hubungi saya melalui kontak berikut.
+      Jika ingin bekerja sama, berdiskusi project, atau sekadar menyapa,
+      silakan hubungi saya melalui kontak berikut atau kirim pesan langsung.
     </p>
 
+    {/* CONTACT INFO */}
     <div className="contact-info">
 
       <div className="contact-item">
         <Mail className="contact-icon" />
-        <a href="mailto:barltzyml@gmail.com" className="contact-link">
-          barltzyml@gmail.com
-        </a>
+
+        <div>
+          <h4>Email</h4>
+
+          <a
+            href="mailto:barltzyml@gmail.com"
+            className="contact-link"
+          >
+            barltzyml@gmail.com
+          </a>
+        </div>
       </div>
 
       <div className="contact-item">
         <MapPin className="contact-icon" />
-        <span>Indonesia</span>
+
+        <div>
+          <h4>Location</h4>
+          <span>Indonesia</span>
+        </div>
       </div>
 
     </div>
 
-    {/* 🔥 BUTTON KE WHATSAPP */}
-    <a 
-      href="https://wa.me/6282197480491"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-     <button className="brutal-btn contact-btn">
-  <MessageCircle size={18} />
-  HUBUNGI SAYA
-</button>
-    </a>
+    {/* 🔥 FORM */}
+    <form className="contact-form">
+
+      <div className="contact-grid">
+
+        {/* NAME */}
+        <div className="input-group">
+          <label>Nama</label>
+
+          <input
+            type="text"
+            placeholder="Masukkan nama..."
+          />
+        </div>
+
+        {/* EMAIL */}
+        <div className="input-group">
+          <label>Email</label>
+
+          <input
+            type="email"
+            placeholder="Masukkan email..."
+          />
+        </div>
+
+      </div>
+
+      {/* SUBJECT */}
+      <div className="input-group">
+        <label>Subjek</label>
+
+        <input
+          type="text"
+          placeholder="Masukkan subjek..."
+        />
+      </div>
+
+      {/* MESSAGE */}
+      <div className="input-group">
+        <label>Pesan</label>
+
+        <textarea
+          rows={6}
+          placeholder="Tulis pesan..."
+        ></textarea>
+      </div>
+
+      {/* BUTTON */}
+      <button
+        type="submit"
+        className="brutal-btn contact-btn"
+      >
+        <MessageCircle size={18} />
+        KIRIM PESAN
+      </button>
+
+    </form>
+
+    {/* 🔥 WHATSAPP */}
+    <div className="contact-wa">
+
+      <p>Atau hubungi langsung melalui WhatsApp</p>
+
+      <a
+        href="https://wa.me/6282197480491"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="brutal-btn whatsapp-btn">
+          <MessageCircle size={18} />
+          CHAT WHATSAPP
+        </button>
+      </a>
+
+    </div>
 
   </div>
 </section>

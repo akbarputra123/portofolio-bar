@@ -427,3 +427,155 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================ */
+/* 🌙 DARK MODE */
+/* ============================================ */
+
+body.dark {
+  background: linear-gradient(
+    180deg,
+    #0f0f1b 0%,
+    #141426 50%,
+    #1b1835 100%
+  );
+
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+/* 🔥 TEXT */
+body.dark p,
+body.dark span,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark a {
+  color: white;
+}
+
+/* 🔥 CARD */
+body.dark .project-card,
+body.dark .skill-item,
+body.dark .about-wrapper,
+body.dark .contact-wrapper,
+body.dark .project-box,
+body.dark .galery-wrapper {
+  background: #1e1e2f;
+
+  border-color: white;
+
+  box-shadow: 6px 6px 0 white;
+}
+
+/* 🔥 BUTTON */
+body.dark .brutal-btn,
+body.dark .appbar-link,
+body.dark .mobile-panel a {
+  background: #26263b;
+
+  color: white;
+
+  border-color: white;
+
+  box-shadow: 4px 4px 0 white;
+}
+
+body.dark .brutal-btn:hover,
+body.dark .appbar-link:hover,
+body.dark .mobile-panel a:hover {
+  background: var(--purple-light);
+
+  box-shadow: 6px 6px 0 white;
+}
+
+/* 🔥 APPBAR */
+body.dark .appbar {
+  background: #19192b;
+
+  border-bottom: 3px solid white;
+
+  box-shadow: 0 6px 0 white;
+}
+
+/* 🔥 MOBILE PANEL */
+body.dark .mobile-panel {
+  background: #19192b;
+
+  border-left: 3px solid white;
+
+  box-shadow: -6px 0 0 white;
+}
+
+/* 🔥 IMAGE */
+body.dark .hero-img,
+body.dark .about-img,
+body.dark .project-img,
+body.dark .logo-box {
+  border-color: white;
+
+  box-shadow: 6px 6px 0 white;
+}
+
+/* 🔥 SOCIAL ICON */
+body.dark .hero-icon {
+  border-color: white;
+
+  box-shadow: 4px 4px 0 white;
+}
+
+body.dark .hero-icon:hover {
+  box-shadow: 6px 6px 0 white;
+}
+
+/* 🔥 HAMBURGER */
+body.dark .hamburger span {
+  background: white;
+}
+
+/* 🔥 TOOLTIP */
+body.dark .hero-tooltip {
+  background: white;
+  color: black;
+
+  border-color: black;
+
+  box-shadow: 2px 2px 0 black;
+}
+
+/* 🔥 THEME BUTTON */
+body.dark .theme-btn {
+  background: #26263b;
+
+  color: white;
+
+  border-color: white;
+
+  box-shadow: 4px 4px 0 white;
+}
+
+body.dark .theme-btn:hover {
+  background: var(--purple-light);
+
+  box-shadow: 6px 6px 0 white;
+}
+
+/* 🔥 SCROLLBAR */
+body.dark::-webkit-scrollbar {
+  width: 10px;
+}
+
+body.dark::-webkit-scrollbar-track {
+  background: #141426;
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background: var(--purple);
+  border-radius: 20px;
+}
+
+/* 🔥 SECTION BORDER */
+body.dark .section {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}

@@ -78,11 +78,9 @@
   fill: black;
 }
 
-/* HOVER ICON */
 .hero-icon:hover {
   transform: translate(-2px, -2px);
   box-shadow: 6px 6px 0 black;
-  background: var(--purple-light);
 }
 
 .hero-icon:hover svg {
@@ -111,4 +109,39 @@
 .hero-social-item:hover .hero-tooltip {
   opacity: 1;
   transform: translateX(-50%) scale(1);
+}
+
+/* DEFAULT */
+.hero-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+/* INSTAGRAM */
+.hero-icon.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  border-color: black;
+}
+
+/* GITHUB */
+.hero-icon.github {
+  background: #24292e;
+}
+
+/* WHATSAPP */
+.hero-icon.whatsapp {
+  background: #25d366;
+}
+
+/* FACEBOOK */
+.hero-icon.facebook {
+  background: #1877f2;
 }

@@ -2,6 +2,7 @@
 .footer {
   width: 100%;
   padding: 25px 20px;
+
   background: var(--purple);
 
   border-top: 3px solid var(--black);
@@ -12,16 +13,19 @@
   gap: 20px;
 }
 
-/* TOP */
+/* 🔥 TOP */
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
-/* TEXT */
+/* 🔥 TEXT */
 .footer-text h2 {
+  margin: 0;
+
   font-weight: 900;
   color: white;
 }
@@ -31,60 +35,94 @@
   color: #ddd;
 }
 
-/* SOCIAL */
+/* 🔥 SOCIAL */
 .footer-social {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* ICON WRAPPER */
+/* 🔥 WRAPPER */
 .social-wrapper {
   position: relative;
 }
 
-/* ICON */
+/* 🔥 ICON */
 .social-icon {
-  width: 42px;
-  height: 42px;
+  width: 45px;
+  height: 45px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: white;
   border: 2px solid black;
   box-shadow: 4px 4px 0 black;
 
   transition: 0.2s;
+
+  overflow: hidden;
 }
 
 .social-icon svg {
   width: 22px;
   height: 22px;
-  fill: black;
+
+  fill: white;
 }
 
-/* HOVER */
+/* 🔥 HOVER */
 .social-icon:hover {
   transform: translate(-2px, -2px);
+
   box-shadow: 6px 6px 0 black;
-  background: var(--purple-light);
 }
 
-.social-icon:hover svg {
-  fill: white;
+/* ================================= */
+/* 🎨 SOCIAL COLORS */
+/* ================================= */
+
+/* INSTAGRAM */
+.social-icon.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+/* GITHUB */
+.social-icon.github {
+  background: #24292e;
+}
+
+/* WHATSAPP */
+.social-icon.whatsapp {
+  background: #25d366;
+}
+
+/* FACEBOOK */
+.social-icon.facebook {
+  background: #1877f2;
 }
 
 /* 🔥 TOOLTIP */
 .tooltip {
   position: absolute;
+
   bottom: -30px;
   left: 50%;
+
   transform: translateX(-50%) scale(0.8);
 
   background: black;
   color: white;
+
   padding: 4px 8px;
+
   font-size: 12px;
   white-space: nowrap;
 
@@ -92,19 +130,85 @@
   box-shadow: 2px 2px 0 white;
 
   opacity: 0;
+
   transition: 0.2s;
+
+  pointer-events: none;
 }
 
 .social-wrapper:hover .tooltip {
   opacity: 1;
+
   transform: translateX(-50%) scale(1);
 }
 
-/* BOTTOM */
+/* 🔥 BOTTOM */
 .footer-bottom {
   border-top: 2px solid black;
+
   padding-top: 15px;
+
   text-align: center;
+
   font-size: 14px;
   color: #ddd;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+}
+
+/* ================================= */
+/* 🌙 FOOTER DARK MODE */
+/* ================================= */
+
+body.dark .footer {
+  background: #19192b;
+
+  border-top: 3px solid white;
+
+  box-shadow: 0 -6px 0 white;
+}
+
+/* TEXT */
+body.dark .footer-text h2,
+body.dark .footer-text p,
+body.dark .footer-bottom {
+  color: white;
+}
+
+/* BOTTOM BORDER */
+body.dark .footer-bottom {
+  border-top: 2px solid white;
+}
+
+/* SOCIAL ICON */
+body.dark .social-icon {
+  border-color: white;
+
+  box-shadow: 4px 4px 0 white;
+}
+
+body.dark .social-icon:hover {
+  box-shadow: 6px 6px 0 white;
+}
+
+/* TOOLTIP */
+body.dark .tooltip {
+  background: white;
+  color: black;
+
+  border-color: black;
+
+  box-shadow: 2px 2px 0 black;
 }
